@@ -22,6 +22,7 @@ class MailSender {
       auth: {
         type: 'OAuth2',
         user: process.env.MAIL_ADDRESS,
+        passwords: process.env.MAIL_PASSWORD,
         accessToken: this.#oauth2.getAccessToken(),
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
